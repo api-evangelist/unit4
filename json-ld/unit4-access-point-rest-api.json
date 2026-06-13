@@ -1,0 +1,82 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "WebAPI",
+  "name": "Unit4 Access Point REST API",
+  "description": "REST API for the Unit4 Access Point PEPPOL service enabling organizations to send and receive electronic business documents (invoices, orders) over the PEPPOL network. Uses Basic Authentication over HTTPS with XML payloads.",
+  "url": "https://ap.unit4.com/rest.html",
+  "documentation": "https://ap.unit4.com/rest.html",
+  "provider": {
+    "@type": "Organization",
+    "name": "Unit4",
+    "url": "https://www.unit4.com/",
+    "sameAs": [
+      "https://www.linkedin.com/company/unit4",
+      "https://twitter.com/unit4global",
+      "https://github.com/Unit4"
+    ]
+  },
+  "version": "current",
+  "endpointURL": "https://ap.unit4.com",
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "https://ap.unit4.com",
+    "availableLanguage": "en"
+  },
+  "potentialAction": [
+    {
+      "@type": "Action",
+      "name": "Send Document via Outbox",
+      "description": "Submit business documents (invoices, orders) for PEPPOL network transmission using multipart/form-data POST to /outbox.",
+      "target": "https://ap.unit4.com/outbox"
+    },
+    {
+      "@type": "Action",
+      "name": "Retrieve Outbox Status",
+      "description": "Retrieve status of outbound messages submitted to the PEPPOL network.",
+      "target": "https://ap.unit4.com/outbox"
+    },
+    {
+      "@type": "Action",
+      "name": "Receive Inbox Messages",
+      "description": "List and retrieve unread inbound PEPPOL messages received from trading partners.",
+      "target": "https://ap.unit4.com/inbox"
+    },
+    {
+      "@type": "Action",
+      "name": "Mark Messages Read",
+      "description": "Mark received inbox messages as read after processing.",
+      "target": "https://ap.unit4.com/inbox"
+    },
+    {
+      "@type": "Action",
+      "name": "Search Messages",
+      "description": "Search all sent and received messages with filtering by timestamp, sender, receiver, and direction.",
+      "target": "https://ap.unit4.com/messages"
+    },
+    {
+      "@type": "Action",
+      "name": "PEPPOL Directory Lookup",
+      "description": "Look up recipient PEPPOL network connectivity and supported document types.",
+      "target": "https://ap.unit4.com/directory"
+    },
+    {
+      "@type": "Action",
+      "name": "Usage Statistics",
+      "description": "Monitor account usage statistics for the Access Point service.",
+      "target": "https://ap.unit4.com/statistics"
+    }
+  ],
+  "applicationCategory": "Electronic Document Exchange",
+  "keywords": [
+    "PEPPOL",
+    "E-Invoicing",
+    "Electronic Documents",
+    "B2B",
+    "Electronic Data Interchange",
+    "Access Point",
+    "Business Documents",
+    "REST API",
+    "XML",
+    "Basic Authentication"
+  ]
+}
