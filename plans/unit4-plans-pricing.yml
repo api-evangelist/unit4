@@ -1,0 +1,46 @@
+name: Unit4 Plans and Pricing
+description: Pricing information for Unit4 ERPx cloud ERP platform and API access. Unit4 uses a per-user subscription model with custom enterprise pricing.
+url: https://www.unit4.com/
+plans:
+  - name: ERPx Cloud ERP
+    description: Cloud ERP platform for service-centric organizations including financials, HR, project management, procurement, and business planning modules.
+    url: https://www.unit4.com/
+    pricing:
+      model: per-user
+      range: $80 - $150 per user per month
+      billing: annual subscription
+      note: Custom enterprise pricing — contact Unit4 sales for exact quote
+    features:
+      - Full ERPx module access based on license tier
+      - REST API access for integrations (M2M clients)
+      - OAuth 2.0 / OpenID Connect authentication
+      - Up to 10 M2M client credentials per tenant
+      - Access Point for PEPPOL e-invoicing network
+    modules:
+      - Financials and Accounting
+      - Human Resources and Payroll
+      - Project Management
+      - Procurement
+      - Customers and Sales
+      - Inventory Management
+      - Business Planning
+      - Commitment Accounting
+      - Reporting and Analytics
+  - name: Unit4 Access Point
+    description: PEPPOL-based electronic document exchange service (invoices, orders) with REST API.
+    url: https://ap.unit4.com/rest.html
+    pricing:
+      model: custom
+      note: Contact Unit4 sales for Access Point pricing
+    features:
+      - PEPPOL network integration
+      - REST API (XML-based)
+      - Test environment included
+      - Document outbox / inbox
+      - Recipient directory lookup
+      - Usage statistics
+notes:
+  - Unit4 does not publish a public self-serve pricing page for ERPx
+  - Trial and demo accounts available via unit4.com contact form
+  - Access Point test accounts available via self-registration or sales contact
+contact: https://www.unit4.com/contact-us

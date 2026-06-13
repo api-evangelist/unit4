@@ -1,0 +1,90 @@
+name: Unit4 ERPx API Rate Limits and Quotas
+description: Rate limits and usage quotas for the Unit4 ERPx REST API. These limits apply at the tenant level across all M2M (machine-to-machine) clients.
+url: https://develop.unit4rd.com/erpx/limits-and-quotas/
+algorithm: sliding-window
+notes:
+  - All limits are per-tenant and shared across all M2M clients configured for that tenant.
+  - Exceeding a rate limit returns HTTP 429 with a Retry-After header.
+  - Exceeding payload size limits returns HTTP 413.
+  - Service unavailability returns HTTP 503; implement exponential backoff with jitter.
+
+limits:
+  api_requests:
+    - scope: per-minute (all M2M clients combined)
+      limit: 500
+      unit: requests
+    - scope: per-24-hours (all M2M clients combined)
+      limit: 500000
+      unit: requests
+
+  data_transfer:
+    inbound:
+      - scope: per-5-minutes (combined)
+        limit: 350
+        unit: MB
+    outbound:
+      - scope: per-5-minutes (combined)
+        limit: 635
+        unit: MB
+    total:
+      - scope: per-24-hours (combined)
+        limit: 32
+        unit: GB
+
+  payload_size:
+    standard_api_call:
+      limit: 5
+      unit: MB
+      note: Excludes file uploads and batch operations
+    document_archive_files:
+      limit: 50
+      unit: MB
+    batch_api:
+      limit: 600
+      unit: MB
+    batch_inbound_per_5min:
+      limit: 650
+      unit: MB
+
+  call_limits:
+    timeout:
+      limit: 220
+      unit: seconds
+    records_per_call:
+      limit: 50000
+      unit: records
+    field_character_length:
+      limit: 255
+      unit: characters
+    m2m_clients_per_tenant:
+      limit: 10
+      unit: clients
+
+  specialized:
+    information_browser_rows:
+      limit: 750000
+      unit: rows
+      note: Maximum for aggregation and retrieval
+    reporting:
+      system_jobs_per_hour: 480
+      concurrent_reports: 15
+    amendment_logging:
+      events_per_day: 20000
+      tables_monitored: 10
+
+  access_point_rest_api:
+    records_per_request:
+      limit: 25
+      unit: records
+      note: Pagination available via query parameters
+
+error_responses:
+  - code: 413
+    meaning: Payload too large
+    action: Reduce payload size
+  - code: 429
+    meaning: Rate limit exceeded
+    action: Check Retry-After header and wait before retrying
+  - code: 503
+    meaning: Service unavailable
+    action: Retry with exponential backoff and jitter

@@ -1,0 +1,90 @@
+aid: unit4
+name: Unit4
+description: Unit4 provides cloud ERP software for service-centric organizations including professional services, public sector, education, and non-profits. Their REST APIs cover financials, HR, payroll, project management, procurement, inventory, and business planning through the ERPx platform, plus PEPPOL-based electronic document exchange via Unit4 Access Point.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/unit4/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+tags:
+  - ERP
+  - Cloud ERP
+  - Enterprise Resource Planning
+  - Financials
+  - Human Resources
+  - Payroll
+  - Project Management
+  - Procurement
+  - Inventory Management
+  - Business Planning
+  - PEPPOL
+  - E-Invoicing
+  - Service Organizations
+  - Public Sector
+apis:
+  - name: Unit4 ERPx REST API
+    description: Comprehensive REST API for Unit4 ERPx cloud ERP platform covering time and expenses, personnel, payroll, procurement, project management, customers and sales, inventory management, planning, commitment accounting, accounting, and reporting. Supports OAuth 2.0 and machine-to-machine (M2M) authentication via client credentials flow.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://develop.unit4rd.com/
+    baseURL: https://api.unit4.com
+    tags:
+      - ERP
+      - Financials
+      - HR
+      - Payroll
+      - Projects
+      - Procurement
+    properties:
+      - type: Documentation
+        url: https://develop.unit4rd.com/erpx/
+      - type: APIReference
+        url: https://develop.unit4cloud.com/erpx/reference/
+      - type: Authentication
+        url: https://develop.unit4rd.com/erpx/auth-security/
+      - type: RateLimits
+        url: https://develop.unit4rd.com/erpx/limits-and-quotas/
+      - type: Versioning
+        url: https://develop.unit4rd.com/erpx/version_deprecation/
+      - type: Changelog
+        url: https://develop.unit4rd.com/erpx/version_deprecation/deprecated_endpoints/2026/
+  - name: Unit4 Access Point REST API
+    description: REST API for the Unit4 Access Point PEPPOL service enabling organizations to send and receive electronic business documents (invoices, orders) over the PEPPOL network. Uses Basic Authentication over HTTPS with XML payloads.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://ap.unit4.com/rest.html
+    baseURL: https://ap.unit4.com
+    tags:
+      - PEPPOL
+      - E-Invoicing
+      - Electronic Documents
+      - B2B
+    properties:
+      - type: Documentation
+        url: https://ap.unit4.com/rest.html
+      - type: TestEnvironment
+        url: https://ap-test.unit4.com/
+common:
+  - type: Website
+    url: https://www.unit4.com/
+  - type: Documentation
+    url: https://develop.unit4rd.com/
+  - type: GitHubOrg
+    url: https://github.com/Unit4
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/unit4
+  - type: Blog
+    url: https://www.unit4.com/blog
+  - type: Pricing
+    url: https://www.unit4.com/contact-us
+  - type: StatusPage
+    url: https://statusgator.com/services/df/unit4-erp
+  - type: X
+    url: https://twitter.com/unit4global
+  - type: Plans
+    url: plans/unit4-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/unit4-rate-limits.yml
+  - type: FinOps
+    url: finops/unit4-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

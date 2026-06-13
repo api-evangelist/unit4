@@ -1,0 +1,57 @@
+name: Unit4 API FinOps
+description: Financial operations guidance for managing Unit4 ERPx API costs, usage optimization, and integration cost considerations.
+url: https://www.unit4.com/
+
+cost_model:
+  type: subscription-bundled
+  description: API access is bundled with the Unit4 ERPx cloud ERP subscription. There is no separate per-call API billing — costs are governed by the user license count and subscription tier.
+  pricing_range: $80 - $150 per user per month (ERPx)
+  billing_model: annual enterprise subscription
+  custom_pricing: true
+  contact: https://www.unit4.com/contact-us
+
+cost_drivers:
+  - driver: User License Count
+    description: Primary cost driver; each named user requires a license seat.
+    optimization: Audit inactive users regularly and reclaim unused licenses.
+  - driver: Module Licensing
+    description: Additional modules (HR, Payroll, Projects, etc.) may require add-on licensing.
+    optimization: License only the modules actively used in production.
+  - driver: M2M Client Credentials
+    description: Up to 10 M2M clients per tenant are included; exceeding this requires discussion with Unit4.
+    optimization: Reuse M2M clients across integration workloads where security policies permit.
+  - driver: API Call Volume
+    description: 500 requests/minute and 500,000 requests/24h per tenant. Heavy integrations that approach these thresholds may indicate over-polling designs.
+    optimization: Implement webhooks / Message Hub events instead of polling to reduce call volume.
+  - driver: Data Transfer
+    description: 32 GB outbound per 24h; large data exports can approach this limit.
+    optimization: Use incremental load patterns (delta sync) and pagination instead of full exports.
+
+optimization_strategies:
+  - strategy: Event-Driven Integration
+    description: Use Unit4 Message Hub (webhooks) to react to document events rather than polling APIs on a schedule. This dramatically reduces API call consumption.
+  - strategy: Incremental Data Loads
+    description: Leverage the ObjectAPI incremental load capability to retrieve only records changed since the last sync rather than full dataset exports.
+  - strategy: Batch API Usage
+    description: Use Batch APIs for bulk data operations to maximize per-call efficiency (up to 600 MB per batch call vs. 5 MB for standard calls).
+  - strategy: Pagination and Limit Control
+    description: Request only the fields and records needed using ObjectAPI filtering, sorting, and limit/offset controls to reduce payload sizes.
+  - strategy: Token Caching
+    description: Cache OAuth access tokens for their full 3600-second (1 hour) validity period to avoid unnecessary token request overhead.
+  - strategy: Monitor Rate Limit Headers
+    description: Inspect HTTP 429 Retry-After headers and implement exponential backoff to avoid wasted retry traffic.
+
+monitoring:
+  - tool: Unit4 Access Point Statistics API
+    endpoint: /statistics
+    description: Returns account usage metrics for the PEPPOL Access Point integration.
+  - tool: Unit4 ERPx Amendment Logging
+    description: Track API-driven data changes; limited to 20,000 events/day and 10 tables.
+  - tool: Tenant Admin Console
+    description: Monitor M2M client usage and API consumption through the ERPx administration interface.
+
+governance:
+  - practice: Regular license audits — deactivate dormant user accounts
+  - practice: Assign M2M clients to specific integration workloads for cost attribution
+  - practice: Review API roadmap deprecations to avoid rework costs (five APIs deprecated, support ending March 1, 2028)
+  - practice: Use test environment (ap-test.unit4.com) for development to avoid consuming production rate limit quotas
