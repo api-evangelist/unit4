@@ -3,6 +3,14 @@
   "url": "https://www.unit4.com/blog",
   "name": "Unit4 Blog",
   "description": "Official blog for Unit4 covering ERP, cloud software, HR, financials, and digital transformation for service-centric organizations.",
-  "fetched": "2026-06-13",
-  "posts": []
+  "fetched": "2026-06-14T20:42:17Z",
+  "posts": [],
+  "repo": "unit4",
+  "feeds": [
+    {
+      "source": "https://www.linkedin.com/company/unit4",
+      "error": "HTTPError"
+    }
+  ],
+  "post_count": 0
 }
