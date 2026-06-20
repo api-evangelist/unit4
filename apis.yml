@@ -1,7 +1,7 @@
 aid: unit4
 name: Unit4
 description: Unit4 provides cloud ERP software for service-centric organizations including professional services, public sector, education, and non-profits. Their REST APIs cover financials, HR, payroll, project management, procurement, inventory, and business planning through the ERPx platform, plus PEPPOL-based electronic document exchange via Unit4 Access Point.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/unit4/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -24,7 +24,7 @@ tags:
 apis:
   - name: Unit4 ERPx REST API
     description: Comprehensive REST API for Unit4 ERPx cloud ERP platform covering time and expenses, personnel, payroll, procurement, project management, customers and sales, inventory management, planning, commitment accounting, accounting, and reporting. Supports OAuth 2.0 and machine-to-machine (M2M) authentication via client credentials flow.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://develop.unit4rd.com/
     baseURL: https://api.unit4.com
     tags:
@@ -49,7 +49,7 @@ apis:
         url: https://develop.unit4rd.com/erpx/version_deprecation/deprecated_endpoints/2026/
   - name: Unit4 Access Point REST API
     description: REST API for the Unit4 Access Point PEPPOL service enabling organizations to send and receive electronic business documents (invoices, orders) over the PEPPOL network. Uses Basic Authentication over HTTPS with XML payloads.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://ap.unit4.com/rest.html
     baseURL: https://ap.unit4.com
     tags:
