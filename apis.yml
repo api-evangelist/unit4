@@ -45,7 +45,7 @@ apis:
         url: https://develop.unit4rd.com/erpx/limits-and-quotas/
       - type: Versioning
         url: https://develop.unit4rd.com/erpx/version_deprecation/
-      - type: Changelog
+      - type: ChangeLog
         url: https://develop.unit4rd.com/erpx/version_deprecation/deprecated_endpoints/2026/
   - name: Unit4 Access Point REST API
     description: REST API for the Unit4 Access Point PEPPOL service enabling organizations to send and receive electronic business documents (invoices, orders) over the PEPPOL network. Uses Basic Authentication over HTTPS with XML payloads.
@@ -60,7 +60,7 @@ apis:
     properties:
       - type: Documentation
         url: https://ap.unit4.com/rest.html
-      - type: TestEnvironment
+      - type: Sandbox
         url: https://ap-test.unit4.com/
 common:
   - type: Website
