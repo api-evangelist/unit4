@@ -63,6 +63,10 @@ apis:
       - type: Sandbox
         url: https://ap-test.unit4.com/
 common:
+  - type: VulnerabilityDisclosure
+    url: security/unit4-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/unit4-domain-security.yml
   - type: Website
     url: https://www.unit4.com/
   - type: Documentation
