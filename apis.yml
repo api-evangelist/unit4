@@ -44,6 +44,13 @@ apis:
       - Financials
       - HR
       - Payroll
+      - Project
+      - Procurement
+    tags_raw:
+      - ERP
+      - Financials
+      - HR
+      - Payroll
       - Projects
       - Procurement
     properties:
