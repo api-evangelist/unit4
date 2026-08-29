@@ -1,6 +1,17 @@
 aid: unit4
 name: Unit4
 description: Unit4 provides cloud ERP software for service-centric organizations including professional services, public sector, education, and non-profits. Their REST APIs cover financials, HR, payroll, project management, procurement, inventory, and business planning through the ERPx platform, plus PEPPOL-based electronic document exchange via Unit4 Access Point.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
