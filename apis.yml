@@ -32,6 +32,20 @@ specificationVersion: '0.23'
 tags:
   - ERP
   - Cloud ERP
+  - Financial
+  - Human Resources
+  - Payroll
+  - Project Management
+  - Procurement
+  - Inventory Management
+  - Business Planning
+  - PEPPOL
+  - E-Invoicing
+  - Service Organizations
+  - Public Sector
+tags_raw:
+  - ERP
+  - Cloud ERP
   - Enterprise Resource Planning
   - Financials
   - Human Resources
@@ -52,8 +66,8 @@ apis:
     baseURL: https://api.unit4.com
     tags:
       - ERP
-      - Financials
-      - HR
+      - Financial
+      - Human Resources
       - Payroll
       - Project
       - Procurement
