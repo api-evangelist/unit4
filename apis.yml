@@ -32,12 +32,12 @@ specificationVersion: '0.23'
 tags:
   - ERP
   - Cloud ERP
-  - Financial
+  - Finance
   - Human Resources
   - Payroll
   - Project Management
   - Procurement
-  - Inventory Management
+  - Inventory
   - Business Planning
   - PEPPOL
   - E-Invoicing
@@ -58,6 +58,7 @@ tags_raw:
   - E-Invoicing
   - Service Organizations
   - Public Sector
+  - Financial
 apis:
   - name: Unit4 ERPx REST API
     description: Comprehensive REST API for Unit4 ERPx cloud ERP platform covering time and expenses, personnel, payroll, procurement, project management, customers and sales, inventory management, planning, commitment accounting, accounting, and reporting. Supports OAuth 2.0 and machine-to-machine (M2M) authentication via client credentials flow.
@@ -66,7 +67,7 @@ apis:
     baseURL: https://api.unit4.com
     tags:
       - ERP
-      - Financial
+      - Finance
       - Human Resources
       - Payroll
       - Project
@@ -78,6 +79,7 @@ apis:
       - Payroll
       - Projects
       - Procurement
+      - Financial
     properties:
       - type: Documentation
         url: https://develop.unit4rd.com/erpx/
