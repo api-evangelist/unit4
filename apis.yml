@@ -27,7 +27,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/unit4.png
 url: https://raw.githubusercontent.com/api-evangelist/unit4/refs/heads/main/apis.yml
 created: '2026-06-13'
-modified: '2026-06-13'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 tags:
   - ERP
@@ -109,6 +109,8 @@ apis:
       - type: Sandbox
         url: https://ap-test.unit4.com/
 common:
+  - url: https://www.unit4.com/rss.xml
+    type: BlogRSS
   - type: VulnerabilityDisclosure
     url: security/unit4-vulnerability-disclosure.yml
   - type: DomainSecurity
