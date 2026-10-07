@@ -1,3 +1,7 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (undated — the file carries no date and git cannot supply one), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
 name: Unit4 ERPx API Rate Limits and Quotas
 description: Rate limits and usage quotas for the Unit4 ERPx REST API. These limits apply at the tenant level across all M2M (machine-to-machine) clients.
 url: https://develop.unit4rd.com/erpx/limits-and-quotas/
