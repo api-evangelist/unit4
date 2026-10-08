@@ -48,3 +48,22 @@ notes:
   - Trial and demo accounts available via unit4.com contact form
   - Access Point test accounts available via self-registration or sales contact
 contact: https://www.unit4.com/contact-us
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - negotiated
+  units: []
+  plans:
+  - name: ERPx Cloud ERP
+    access: other
+    model: negotiated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Unit4 Access Point
+    access: other
+    model: negotiated
+    model_how: derived
+    units: []
+    periods: []
